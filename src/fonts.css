@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'wavy';
+    src: local('wavy'), url('./fonts/wavy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
