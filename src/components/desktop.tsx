@@ -1,13 +1,20 @@
+import { useState } from "react"
 import Item from "./item"
 import Kasten from "./kasten"
 
 
 const Desktop: React.FC = () => {
 
+    const [windows, setWindows] = useState<React.ReactNode[]>([]);
+
+    const addWindow = (newWindow: React.ReactNode) => {
+        setWindows((prevWindows) => [...prevWindows, newWindow]);
+    }
+
 
     return(
         <div className='App'>
-            <Item icon="foldernormal">
+            <Item addWindow={addWindow} icon="foldernormal">
                 <Kasten>
                     <div 
                         style={{
@@ -16,8 +23,7 @@ const Desktop: React.FC = () => {
                             background: '#ffffff',
                         }}>
                         hello
-                        {/* #FIXME: Fix nesting problem */}
-                        <Item icon="foldernormal">
+                        <Item addWindow={addWindow} icon="foldernormal">
                             <Kasten>
                                 <video width="320" height="480" autoPlay muted loop >
                                     <source src="/videos/wavy.mp4" type="video/mp4" />
@@ -27,21 +33,14 @@ const Desktop: React.FC = () => {
                     </div>
                 </Kasten>
             </Item>
-            {/* <Kasten>
-                <video width="320" height="480" autoPlay muted loop >
-                    <source src="/videos/wavy.mp4" type="video/mp4" />
-                </video>
-            </Kasten>
-            <Kasten>
-                <div 
-                    style={{
-                        width: '1080px',
-                        height: '600px',
-                        background: '#ffffff',
-                    }}>
-                    hello
+
+            {windows.length}
+
+            {windows.map((window, index) => (
+                <div key={index} style={{position: 'absolute'}}>
+                    {window}
                 </div>
-            </Kasten> */}
+            ))}
         </div>
     )
 }
