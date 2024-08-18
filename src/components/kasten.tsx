@@ -10,6 +10,7 @@ const Kasten: React.FC<KastenProps> = ({children}) => {
 
     const [isVisible, setIsVisible] = useState(true);
     const [position, setPosition] = useState<{top:number, left: number}>({ top: 0, left : 0})
+    const [zIndex, setZIndex] = useState<number>();
     const [isDragging, setIsDragging] = useState<boolean>(false);
     const [offset, setOffset] = useState({ x: 0, y: 0 });
 
@@ -30,6 +31,18 @@ const Kasten: React.FC<KastenProps> = ({children}) => {
           y: e.clientY - position.top,
           x: e.clientX - position.left,
         });
+
+        const elements = document.querySelectorAll('*'); // Select all elements
+        let highestZIndex = 0;
+
+        elements.forEach((el) => {
+            const zIndex = Number(window.getComputedStyle(el).zIndex);
+            if (!isNaN(zIndex)) {
+                highestZIndex = Math.max(highestZIndex, zIndex);
+            }
+        });
+
+        setZIndex(highestZIndex + 1);
       };
     
       const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent> | MouseEvent) => {
@@ -73,7 +86,8 @@ const Kasten: React.FC<KastenProps> = ({children}) => {
                     className={style.normal}
                     style={{
                         top: `${position.top}px`,
-                        left: `${position.left}px`
+                        left: `${position.left}px`,
+                        zIndex: `${zIndex}`,
                     }}
                 >
                     <div 
@@ -94,17 +108,12 @@ const Kasten: React.FC<KastenProps> = ({children}) => {
                         <WavyButton funktion='close' use={handleRemove}>
                         </WavyButton>
                     </div>
-                    <button onClick={generateRandomPosition}>Move Div to a Random Position</button>
                     <div className={style.container}>
                         <div className={style.toolbar}>
                             <div className={style.innen}>Hello</div>
                             <div className={style.searchbar}>Search Items...</div>
                         </div>
                         <div className={style.inhalt}>        
-                            <div className={style.content}>
-                                {position.top}
-                                {position.left}
-                            </div>  
                             {children}
                         </div>
                     </div>
