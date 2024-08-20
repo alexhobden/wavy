@@ -1,5 +1,5 @@
 import { Children } from 'react';
-import style from './button.module.css'
+import style from './wavy.module.css'
 
 interface WavyButtonProps {
     children?: React.ReactNode; // Make the children prop optional
@@ -14,7 +14,7 @@ const WavyButton: React.FC<WavyButtonProps> = ({children, funktion, use}) => {
     return(
         <button 
             onClick={use}
-            className={style.normal}
+            className={style.button}
             style={{
                 backgroundImage: `url(${name})`,
                 backgroundRepeat: `no-repeat`, /* Prevent the SVG from repeating */
