@@ -11,6 +11,21 @@
     user-select: none;
 }
 
+.taskbar{
+    position: fixed;
+    padding: 3px;
+    background-color: #ffe8a9;
+    box-shadow: 
+        inset -3px -3px 0 0 #443d2d,
+        inset 3px 3px 0 0 #fffaee,
+        inset -6px -6px 0 0 #c4b795,
+        inset 6px 6px 0 0 #ffeec0;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+}
+
 .innen{
     font-family: 'wavy';
     flex:1;
@@ -55,9 +70,9 @@
 
 .header{
     box-shadow: 
-        inset -3px -3px 0 0 #443d2d,
-        inset 3px 3px 0 0 #ffeec0,
-        inset -6px -6px 0 0 #c4b795;
+        inset -2px -2px 0 0 #443d2d,
+        inset 2px 2px 0 0 #ffeec0,
+        inset -4px -4px 0 0 #c4b795;
         /* inset 6px 6px 0 0 #ffeec0; */
     padding-bottom: 6px;
     padding-right: 8px;
@@ -71,10 +86,10 @@
 }
 
 .container{
-    padding-left: 3px;
-    padding-bottom: 6px;
-    padding-right: 6px;
-    padding-top: 3px;
+    padding-left: 2px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
 }
 
 .title{
@@ -88,4 +103,15 @@
     width: 320px;
     height: 480px;
     background-color: #ffffff;
+}
+
+.display{
+    background-color: #e6b8f8;
+}
+
+.directory{
+    width: 1080px;
+    height: 600px;
+    background: #ffffff;
+    padding: 8px;
 }
