@@ -31,10 +31,16 @@
 }
 
 .directory{
-    width: 1080px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 64px);
+    width: 840px;
     height: 600px;
     background: #ffffff;
     padding: 8px;
+}
+
+.explorer{
+    width:240px
 }
 
 .header{
@@ -87,6 +93,20 @@
         inset 4px 4px 0 0 #ffeec0;
     display: inline-block;
     user-select: none;
+}
+
+.path{
+    width: 98%;
+    height:20px;
+    font-family: 'wavy';
+    padding: 8px;
+    margin-left: 4px;  
+    background: #ffffff;
+    box-shadow:
+        inset -2px -2px 0 0 #fffaee,
+        inset 2px 2px 0 0 #443d2d,
+        inset -4px -4px 0 0 #ffeec0,
+        inset 4px 4px 0 0 #c4b795;  
 }
 
 .searchbar{

@@ -7,9 +7,15 @@ interface WavyDirectoryProps{
 const WavyDirectory: React.FC<WavyDirectoryProps> = ({children}) => {
 
     return(
-        <div className={style.directory}>
-            {children}
-        </div>
+        <>
+            <div style={{display: 'flex'}} className={style.path}><img style={{marginRight: '12px'}} src={`/images/foldernormal.png`} alt="" />   W:/user/alex/desktop/wavydrive</div>
+            <div style={{display: 'flex'}}>
+                <div className={style.explorer}></div>
+                <div className={style.directory}>
+                    {children}
+                </div>
+            </div>
+        </>
     )
 }
 

@@ -25,7 +25,7 @@ const Desktop: React.FC = () => {
                         <Item addWindow={addWindow} icon="console" text="hello.exe">
                             <WavyConsole></WavyConsole>
                         </Item>
-                        <Item addWindow={addWindow} icon="foldernormal" text="car.mp4">
+                        <Item addWindow={addWindow} icon="video" text="car.mp4">
                             <Kasten>
                                 <video width="320" height="480" autoPlay muted loop >
                                     <source src="/videos/wavy.mp4" type="video/mp4" />
