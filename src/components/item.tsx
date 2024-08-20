@@ -1,3 +1,4 @@
+import { Center } from "@react-three/drei";
 import { useState } from "react";
 
 interface ItemProps {
@@ -20,9 +21,11 @@ const Item: React.FC<ItemProps> = ({children, icon, text, addWindow}) => {
     }
 
     return(
-        <div>
-            <div onClick={addChildToWindow}><img src={`/images/${icon}.png`} alt="" /></div>
-            <div>
+        <div style={{
+            width: '64px'
+        }}>
+            <div style={{display: 'flex', justifyContent: 'center'}} onClick={addChildToWindow}><img style={{transform: 'scale(1.1)'}} src={`/images/${icon}.png`} alt="" /></div>
+            <div style={{display: 'flex', justifyContent: 'center', fontFamily: 'wavy', fontSize:'14px', textAlign: 'center'}}>
                 {text}
             </div>
         </div>
