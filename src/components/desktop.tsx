@@ -4,6 +4,7 @@ import Kasten from "./kasten"
 import WavyConsole from "./wavyConosle";
 import WavyTaskBar from "./wavyTaskBar";
 import ModelViewer from "./modelViewer";
+import WavyDirectory from "./wavyDirectory";
 
 
 const Desktop: React.FC = () => {
@@ -20,13 +21,7 @@ const Desktop: React.FC = () => {
             <WavyTaskBar></WavyTaskBar>
             <Item addWindow={addWindow} icon="foldernormal" text="clickme">
                 <Kasten>
-                    <div 
-                        style={{
-                            width: '1080px',
-                            height: '600px',
-                            background: '#ffffff',
-                            padding: '8px'
-                        }}>
+                    <WavyDirectory>
                         <Item addWindow={addWindow} icon="console" text="hello.exe">
                             <WavyConsole></WavyConsole>
                         </Item>
@@ -42,7 +37,7 @@ const Desktop: React.FC = () => {
                                 <ModelViewer/>
                             </Kasten>
                         </Item>
-                    </div>
+                    </WavyDirectory>
                 </Kasten>
             </Item>
 
