@@ -1,15 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Kasten from './components/kasten';
-import './fonts.css';
-import ModelViewer from './components/modelViewer';
-import Desktop from './components/desktop';
+import React from "react"
+import logo from "./logo.svg"
+import "./App.css"
+import Kasten from "./components/kasten"
+import "./fonts.css"
+import ModelViewer from "./components/modelViewer"
+import Desktop from "./components/desktop"
 
 function App() {
-  return (
-    <Desktop></Desktop>
-  );
+    return <Desktop></Desktop>
 }
 
-export default App;
+export default App

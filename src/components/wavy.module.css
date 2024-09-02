@@ -1,4 +1,4 @@
-.button{
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,45 +6,58 @@
     width: 25px;
     margin-left: 1px;
     background-color: #ffe8a9;
-    box-shadow: 
+    box-shadow:
         inset -1px -1px 0 0 #443d2d,
         inset 1px 1px 0 0 #fffaee,
         inset -2px -2px 0 0 #c4b795,
         inset 2px 2px 0 0 #fff2d0;
 }
 
-.container{
+.container {
     padding-left: 2px;
     padding-bottom: 4px;
     padding-right: 4px;
     padding-top: 2px;
 }
 
-.content{
+.content {
     width: 320px;
     height: 480px;
     background-color: #ffffff;
 }
 
-.display{
+.display {
     background-color: #e6b8f8;
 }
 
-.directory{
+.directory {
     display: grid;
     grid-template-columns: repeat(auto-fill, 64px);
     width: 840px;
     height: 600px;
     background: #ffffff;
     padding: 8px;
+
+    box-shadow:
+        inset -2px -2px 0 0 #fffaee,
+        inset 2px 2px 0 0 #443d2d,
+        inset -4px -4px 0 0 #ffeec0,
+        inset 4px 4px 0 0 #c4b795;
 }
 
-.explorer{
-    width:240px
+.explorer {
+    width: 240px;
+    background-color: #ffffff;
+
+    box-shadow:
+        inset -2px -2px 0 0 #fffaee,
+        inset 2px 2px 0 0 #443d2d,
+        inset -4px -4px 0 0 #ffeec0,
+        inset 4px 4px 0 0 #c4b795;
 }
 
-.header{
-    box-shadow: 
+.header {
+    box-shadow:
         inset -2px -2px 0 0 #443d2d,
         inset 2px 2px 0 0 #ffeec0,
         inset -4px -4px 0 0 #c4b795;
@@ -58,7 +71,14 @@
     background: linear-gradient(to right, #583566, #e6b8f8);
 }
 
-.inhalt{
+.inhalt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+    /* max-width: 100%; */
+    /* background: yellow; */
+    /* opacity: 0.5; */
     padding: 4px;
     box-shadow:
         inset -2px -2px 0 0 #fffaee,
@@ -67,26 +87,37 @@
         inset 4px 4px 0 0 #c4b795;
 }
 
-.innen{
-    font-family: 'wavy';
-    flex:1;
-    max-width: calc(100% - 100px);   
+.innen {
+    /* width: 100%; */
+    /* background: red; */
+    /* opacity: 0.5; */
+    font-family: "wavy";
+    flex: 1;
+
+    /* max-width: 80%; */
+    /* max-width: calc(100% - 100px); */
     overflow-wrap: break-word;
     word-wrap: break-word;
     white-space: normal;
     padding: 8px;
-    box-shadow: 
+    box-shadow:
         inset -2px -2px 0 0 #443d2d,
         inset 2px 2px 0 0 #fffaee,
         inset -4px -4px 0 0 #c4b795,
-        inset 4px 4px 0 0 #ffeec0;  
+        inset 4px 4px 0 0 #ffeec0;
 }
 
-.normal{
+.mixer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+}
+
+.normal {
     position: fixed;
     padding: 3px;
     background-color: #ffe8a9;
-    box-shadow: 
+    box-shadow:
         inset -2px -2px 0 0 #443d2d,
         inset 2px 2px 0 0 #fffaee,
         inset -4px -4px 0 0 #c4b795,
@@ -95,56 +126,60 @@
     user-select: none;
 }
 
-.path{
-    width: 98%;
-    height:20px;
-    font-family: 'wavy';
+.path {
+    width: calc(100% - 16px);
+    height: 20px;
+    font-family: "wavy";
     padding: 8px;
-    margin-left: 4px;  
+    margin-left: 4px;
     background: #ffffff;
     box-shadow:
         inset -2px -2px 0 0 #fffaee,
         inset 2px 2px 0 0 #443d2d,
         inset -4px -4px 0 0 #ffeec0,
-        inset 4px 4px 0 0 #c4b795;  
+        inset 4px 4px 0 0 #c4b795;
 }
 
-.searchbar{
-    width: 100px;
-    font-family: 'wavy';
+.searchbar {
+    /* width: 20%; */
+    font-family: "wavy";
     padding: 8px;
-    margin-left: 4px;  
+    margin-left: 4px;
     background: #ffffff;
     box-shadow:
         inset -2px -2px 0 0 #fffaee,
         inset 2px 2px 0 0 #443d2d,
         inset -4px -4px 0 0 #ffeec0,
-        inset 4px 4px 0 0 #c4b795;  
+        inset 4px 4px 0 0 #c4b795;
 }
 
-.taskbar{
+.taskbar {
     position: fixed;
     padding: 3px;
     background-color: #ffe8a9;
-    box-shadow: 
+    box-shadow:
         inset -3px -3px 0 0 #443d2d,
         inset 3px 3px 0 0 #fffaee,
         inset -6px -6px 0 0 #c4b795,
         inset 6px 6px 0 0 #ffeec0;
-    width: 100%;
+    width: calc(100% - 6px);
     height: 40px;
     bottom: 0;
     left: 0;
 }
 
-.title{
+.title {
     flex-grow: 4;
-    font-family: 'wavy';
+    font-family: "wavy";
     color: #ffffff;
-    -webkit-text-stroke: 1px rgb(255, 255, 255); 
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
-.toolbar{
+.toolbar {
+    width: 100%;
+    max-width: 100%;
+    /* background: blue; */
+    /* opacity: 0.5; */
     display: flex;
     margin-bottom: 4px;
 }

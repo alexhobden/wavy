@@ -1,24 +1,23 @@
-import { Children } from 'react';
-import style from './wavy.module.css'
+import { Children } from "react"
+import style from "./wavy.module.css"
 
 interface WavyButtonProps {
-    children?: React.ReactNode; // Make the children prop optional
-    use?: () => void;
-    funktion: string;
+    children?: React.ReactNode // Make the children prop optional
+    use?: () => void
+    funktion: string
 }
 
-const WavyButton: React.FC<WavyButtonProps> = ({children, funktion, use}) => {
-    
-    const name = `/svgs/${funktion}.svg`;
+const WavyButton: React.FC<WavyButtonProps> = ({ children, funktion, use }) => {
+    const name = `/svgs/${funktion}.svg`
 
-    return(
-        <button 
+    return (
+        <button
             onClick={use}
             className={style.button}
             style={{
                 backgroundImage: `url(${name})`,
-                backgroundRepeat: `no-repeat`, /* Prevent the SVG from repeating */
-                backgroundPosition: `center`
+                backgroundRepeat: `no-repeat` /* Prevent the SVG from repeating */,
+                backgroundPosition: `center`,
             }}
         >
             {children}
@@ -26,4 +25,4 @@ const WavyButton: React.FC<WavyButtonProps> = ({children, funktion, use}) => {
     )
 }
 
-export default WavyButton;
+export default WavyButton
