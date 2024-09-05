@@ -45,9 +45,21 @@
         inset 4px 4px 0 0 #c4b795;
 }
 
+.entry {
+    display: flex;
+    align-items: bottom;
+    height: 16px;
+    width: 100%;
+    font-family: wavy;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
 .explorer {
-    width: 240px;
+    width: 200px;
     background-color: #ffffff;
+
+    padding: 20px;
 
     box-shadow:
         inset -2px -2px 0 0 #fffaee,

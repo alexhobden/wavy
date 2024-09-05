@@ -1,3 +1,4 @@
+import ExplorEntry from "../elements/explorEntry"
 import VideoPlayer from "./videoPlayer"
 import style from "./wavy.module.css"
 
@@ -18,6 +19,11 @@ const WavyDirectory: React.FC<WavyDirectoryProps> = ({ children }) => {
             </div>
             <div style={{ display: "flex" }}>
                 <div className={style.explorer}>
+                    <ExplorEntry>Home</ExplorEntry>
+                    <ExplorEntry>Blender</ExplorEntry>
+                    <ExplorEntry>TV Room</ExplorEntry>
+                    <ExplorEntry>Art</ExplorEntry>
+                    <ExplorEntry>Animation</ExplorEntry>
                     {/* <VideoPlayer size={228}></VideoPlayer> */}
                 </div>
                 <div className={style.directory}>{children}</div>

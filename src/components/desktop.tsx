@@ -8,6 +8,7 @@ import WavyDirectory from "./wavyDirectory"
 import VideoPlayer from "./videoPlayer"
 import WindowFrame from "./windowFrame"
 import Mixer from "./mixer"
+import ExplorEntry from "../elements/explorEntry"
 
 const Desktop: React.FC = () => {
     const [windows, setWindows] = useState<React.ReactNode[]>([])
@@ -29,7 +30,11 @@ const Desktop: React.FC = () => {
                         >
                             <WavyConsole></WavyConsole>
                         </Item>
-                        <Item addWindow={addWindow} icon="video" text="car.mp4">
+                        <Item
+                            addWindow={addWindow}
+                            icon="videofile"
+                            text="car.mp4"
+                        >
                             <Kasten>
                                 <video
                                     width="320"
@@ -45,6 +50,21 @@ const Desktop: React.FC = () => {
                                 </video>
                             </Kasten>
                         </Item>
+
+                        <Item
+                            addWindow={addWindow}
+                            icon="videofile"
+                            text="frog.mp4"
+                        >
+                            <Kasten>
+                                <img
+                                    style={{ width: "500px", height: "500px" }}
+                                    src="./videos/frog_animation.gif"
+                                    alt=""
+                                />
+                            </Kasten>
+                        </Item>
+
                         <Item
                             addWindow={addWindow}
                             icon="network"
@@ -66,6 +86,8 @@ const Desktop: React.FC = () => {
             <Item addWindow={addWindow} icon="video" text="mixer.wavy">
                 <Mixer></Mixer>
             </Item>
+
+            <ExplorEntry>Hello</ExplorEntry>
 
             {windows.length}
 
