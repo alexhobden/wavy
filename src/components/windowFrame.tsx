@@ -101,7 +101,7 @@ const WindowFrame: React.FC<WindowProps> = ({ children }) => {
                     }}
                     onClick={handleZ}
                 >
-                    <div className="shadow-header px-2 pb-[6px] pt-1 flex items-center h-[28px] bg-header">
+                    <div className="shadow-header px-[8px] pb-[6px] pt-[4px] flex items-center h-[34px] bg-header">
                         <div
                             className={style.title}
                             onMouseDown={handleMouseDown}
