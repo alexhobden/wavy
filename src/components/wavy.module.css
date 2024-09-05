@@ -125,6 +125,19 @@
     grid-template-rows: repeat(2, auto);
 }
 
+.normal {
+    position: fixed;
+    padding: 3px;
+    background-color: #ffe8a9;
+    box-shadow:
+        inset -2px -2px 0 0 #443d2d,
+        inset 2px 2px 0 0 #fffaee,
+        inset -4px -4px 0 0 #c4b795,
+        inset 4px 4px 0 0 #ffeec0;
+    display: inline-block;
+    user-select: none;
+}
+
 .path {
     width: calc(100% - 16px);
     height: 20px;
@@ -150,6 +163,21 @@
         inset 2px 2px 0 0 #443d2d,
         inset -4px -4px 0 0 #ffeec0,
         inset 4px 4px 0 0 #c4b795;
+}
+
+.taskbar {
+    position: fixed;
+    padding: 3px;
+    background-color: #ffe8a9;
+    box-shadow:
+        inset -3px -3px 0 0 #443d2d,
+        inset 3px 3px 0 0 #fffaee,
+        inset -6px -6px 0 0 #c4b795,
+        inset 6px 6px 0 0 #ffeec0;
+    width: calc(100% - 6px);
+    height: 40px;
+    bottom: 0;
+    left: 0;
 }
 
 .title {

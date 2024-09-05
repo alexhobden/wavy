@@ -38,7 +38,18 @@ module.exports = {
                       inset 2px 2px 0 0 #443d2d,
                       inset -4px -4px 0 0 #ffeec0,
                       inset 4px 4px 0 0 #c4b795
-                `,
+                    `,
+                },
+
+                "wavy-button": {
+                    backgroundColor: "#ffe8a9",
+                    boxShadow: `
+                        inset -1px -1px 0 0 #443d2d,
+                        inset 1px 1px 0 0 #fffaee,
+                        inset -2px -2px 0 0 #c4b795,
+                        inset 2px 2px 0 0 #fff2d0;
+                
+                    `,
                 },
             })
         },
