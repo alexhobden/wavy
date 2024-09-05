@@ -13,7 +13,7 @@ const WavyButton: React.FC<WavyButtonProps> = ({ children, funktion, use }) => {
     return (
         <button
             onClick={use}
-            className={style.button}
+            className="wavy-solid w-6 h-6 ml-[1px]"
             style={{
                 backgroundImage: `url(${name})`,
                 backgroundRepeat: `no-repeat` /* Prevent the SVG from repeating */,

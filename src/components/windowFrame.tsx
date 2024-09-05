@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import style from "./wavy.module.css"
-import WavyButton from "./wavybutton"
+import WavyButton from "./wavyButton"
 
 interface WindowProps {
     children?: React.ReactNode
@@ -93,7 +93,7 @@ const WindowFrame: React.FC<WindowProps> = ({ children }) => {
         <>
             {isVisible && (
                 <div
-                    className={style.normal}
+                    className="fixed padding-[-3px] wavy-solid inline-block select-none"
                     style={{
                         top: `${position.top}px`,
                         left: `${position.left}px`,
@@ -101,7 +101,7 @@ const WindowFrame: React.FC<WindowProps> = ({ children }) => {
                     }}
                     onClick={handleZ}
                 >
-                    <div className={style.header}>
+                    <div className="shadow-header px-2 pb-[6px] pt-1 flex items-center h-[34px] bg-header">
                         <div
                             className={style.title}
                             onMouseDown={handleMouseDown}

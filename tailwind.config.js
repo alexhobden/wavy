@@ -6,6 +6,17 @@ module.exports = {
             fontFamily: {
                 wavy: ["wavy", "sans-serif"],
             },
+
+            boxShadow: {
+                header: `
+                    inset -2px -2px 0 0 #443d2d,
+                    inset 2px 2px 0 0 #ffeec0,
+                    inset -4px -4px 0 0 #c4b795
+                `,
+            },
+            backgroundImage: {
+                header: "linear-gradient(to right, #583566, #e6b8f8)",
+            },
         },
     },
     plugins: [

@@ -1,4 +1,4 @@
-import WavyButton from "./wavybutton"
+import WavyButton from "./wavyButton"
 import style from "./kasten.module.css"
 import WindowFrame from "./windowFrame"
 import Typewriter from "../utils/Typewriter"

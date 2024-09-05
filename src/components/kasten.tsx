@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import style from "./wavy.module.css"
-import WavyButton from "./wavybutton"
+import WavyButton from "./wavyButton"
 import WindowFrame from "./windowFrame"
 
 interface KastenProps {
