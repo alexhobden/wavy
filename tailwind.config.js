@@ -41,13 +41,15 @@ module.exports = {
                     `,
                 },
 
-                "wavy-button": {
+                ".wavy-button": {
                     backgroundColor: "#ffe8a9",
                     boxShadow: `
-                        inset -1px -1px 0 0 #443d2d,
-                        inset 1px 1px 0 0 #fffaee,
-                        inset -2px -2px 0 0 #c4b795,
-                        inset 2px 2px 0 0 #fff2d0;
+                        inset -2px -2px 0 0 #000000,
+                        inset 2px 2px 0 0 #545454,
+                        inset -3px -3px 0 0 #443d2d,
+                        inset 3px 3px 0 0 #fffaee,
+                        inset -4px -4px 0 0 #c4b795,
+                        inset 4px 4px 0 0 #fff2d0
                 
                     `,
                 },
