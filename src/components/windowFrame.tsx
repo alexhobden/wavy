@@ -94,14 +94,10 @@ const WindowFrame: React.FC<WindowProps> = ({ children }) => {
             {isVisible && (
                 <div
                     className="fixed p-[3px] wavy-solid inline-block select-none"
-                    onMouseDown={handleMouseDown}
-                    onMouseMove={handleMouseMove}
-                    onMouseUp={handleMouseUp}
                     style={{
                         top: `${position.top}px`,
                         left: `${position.left}px`,
                         zIndex: `${zIndex}`,
-                        cursor: isDragging ? "grabbing" : "grab",
                     }}
                     onClick={handleZ}
                 >
