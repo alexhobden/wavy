@@ -17,6 +17,10 @@ module.exports = {
             backgroundImage: {
                 header: "linear-gradient(to right, #583566, #e6b8f8)",
             },
+
+            flexGrow: {
+                4: "4",
+            },
         },
     },
     plugins: [
@@ -32,7 +36,6 @@ module.exports = {
                     `,
                 },
                 ".wavy-hollow": {
-                    backgroundColor: "#ffffff",
                     boxShadow: `
                       inset -2px -2px 0 0 #fffaee,
                       inset 2px 2px 0 0 #443d2d,
