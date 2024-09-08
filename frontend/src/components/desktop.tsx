@@ -27,7 +27,9 @@ const Desktop: React.FC = () => {
                             addWindow={addWindow}
                             icon="console"
                             text="hello.exe"
-                        ></Item>
+                        >
+                            <WavyConsole></WavyConsole>
+                        </Item>
                     </WavyDirectory>
                 </Kasten>
             </Item>

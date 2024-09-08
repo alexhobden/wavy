@@ -8,7 +8,7 @@ const WavyConsole: React.FC = () => {
                 <div className="w-[600px] h-[400px] bg-black p-[6px] text-[#04e200] font-console text-[14px]">
                     {/* #TODO: Make Typewriter compatible with paragraphs */}
                     <Typewriter
-                        text="Hello, my name is alex hobden, im a software developer based in stuttgart...I would love to gain a carreer in the Game Design Industry"
+                        text="Mit der Ankunft frühlingshafter Tage leitet sich auch das 242. Coleursemester der Rheno-Nicaria ein. Wie gewohnt halten wir ein interessantes Programm bereit, in dem sich unsere Prinzipien -Religion, Wissenschaft, und Freundschaft - wiederfinden. Wir blicken einem Semester voller erinnerungswürdiger Momente entgegen und heißen euch herzlich willkommen, gemeinsam mit uns auf dem Rheno-Nicaren-Haus diese Zeit zu gestalten und zu erleben."
                         speed={50}
                         linebreak={76}
                         stepsize={1}
