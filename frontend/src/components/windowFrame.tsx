@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import style from "./wavy.module.css"
 import WavyButton from "./wavyButton"
 
 interface WindowProps {
@@ -121,7 +120,7 @@ const WindowFrame: React.FC<WindowProps> = ({ children }) => {
                         ></WavyButton>
                     </div>
                     <div className="pl-[2px] pb-[4px] pr-[4px] pt[2px]">
-                        <div className="flex flex-col items-center p-1 wavy-hollow">
+                        <div className="flex flex-col items-center p-[4px] wavy-hollow">
                             {children}
                         </div>
                     </div>

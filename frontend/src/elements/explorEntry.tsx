@@ -6,7 +6,7 @@ interface WindowProps {
 
 const ExplorEntry: React.FC<WindowProps> = ({ children }) => {
     return (
-        <div className={style.entry}>
+        <button className="flex align-bottom h-[16px] w-full font-wavy text-[14px] mb-[6px] hover:cursor-default focus:bg-[#97be0d]">
             <img
                 style={{
                     height: "16px",
@@ -16,7 +16,7 @@ const ExplorEntry: React.FC<WindowProps> = ({ children }) => {
                 alt=""
             />
             {children}
-        </div>
+        </button>
     )
 }
 

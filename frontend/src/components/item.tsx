@@ -20,30 +20,15 @@ const Item: React.FC<ItemProps> = ({ children, icon, text, addWindow }) => {
     }
 
     return (
-        <div
-            style={{
-                width: "64px",
-            }}
-        >
-            <div
-                style={{ display: "flex", justifyContent: "center" }}
-                onClick={addChildToWindow}
-            >
+        <div className="w-[64px]">
+            <div className="flex justify-center" onClick={addChildToWindow}>
                 <img
                     style={{ transform: "scale(1.1)" }}
                     src={`/images/${icon}.png`}
                     alt=""
                 />
             </div>
-            <div
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    fontFamily: "wavy",
-                    fontSize: "14px",
-                    textAlign: "center",
-                }}
-            >
+            <div className="flex justify-center font-wavy text-[14px] text-center">
                 {text}
             </div>
         </div>

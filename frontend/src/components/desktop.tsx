@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Item from "./item"
-import Kasten from "./kasten"
+import Kasten from "./wavyContainer"
 import WavyConsole from "./wavyConosle"
 import WavyTaskBar from "./wavyTaskBar"
 import ModelViewer from "./modelViewer"

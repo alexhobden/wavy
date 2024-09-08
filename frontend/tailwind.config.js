@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 wavy: ["wavy", "sans-serif"],
+                console: ["console", "sans-serif"],
             },
 
             boxShadow: {

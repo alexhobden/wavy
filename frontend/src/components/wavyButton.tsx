@@ -1,6 +1,3 @@
-import { Children } from "react"
-import style from "./wavy.module.css"
-
 interface WavyButtonProps {
     children?: React.ReactNode // Make the children prop optional
     use?: () => void
