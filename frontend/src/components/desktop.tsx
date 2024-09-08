@@ -23,13 +23,13 @@ const Desktop: React.FC = () => {
             <Item addWindow={addWindow} icon="folderrhn" text="clickme">
                 <Kasten title="KAV Rheno-Nicaria e.V.">
                     <WavyDirectory>
-                        <Item
+                        {/* <Item
                             addWindow={addWindow}
                             icon="console"
                             text="hello.exe"
                         >
                             <WavyConsole></WavyConsole>
-                        </Item>
+                        </Item> */}
                     </WavyDirectory>
                 </Kasten>
             </Item>
@@ -37,10 +37,6 @@ const Desktop: React.FC = () => {
             <Item addWindow={addWindow} icon="video" text="mixer.wavy">
                 <Mixer></Mixer>
             </Item>
-
-            <ExplorEntry>Hello</ExplorEntry>
-
-            {windows.length}
 
             {windows.map((window, index) => (
                 <div key={index} style={{ position: "absolute" }}>

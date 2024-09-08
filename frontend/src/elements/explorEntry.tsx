@@ -1,12 +1,22 @@
 import style from "../components/wavy.module.css"
 
-interface WindowProps {
+interface EntryProps {
     children?: React.ReactNode
+    switchTab: (child: React.ReactNode) => void
+    name: string;
 }
 
-const ExplorEntry: React.FC<WindowProps> = ({ children }) => {
+const ExplorEntry: React.FC<EntryProps> = ({ name, switchTab, children }) => {
+
+
+    const switchExplorerTab = () => {
+        switchTab(children)
+    }
+
     return (
-        <button className="flex align-bottom h-[16px] w-full font-wavy text-[14px] mb-[6px] hover:cursor-default focus:bg-[#97be0d]">
+        <button 
+        onClick={switchExplorerTab}
+        className="flex align-bottom h-[16px] w-full font-wavy text-[14px] mb-[6px] hover:cursor-default focus:bg-[#97be0d]">
             <img
                 style={{
                     height: "16px",
@@ -15,7 +25,7 @@ const ExplorEntry: React.FC<WindowProps> = ({ children }) => {
                 src={`/images/folderrhn.png`}
                 alt=""
             />
-            {children}
+            <div>{name}</div>
         </button>
     )
 }
