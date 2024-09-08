@@ -1,4 +1,4 @@
-import Kasten from "./kasten"
+import Kasten from "./wavyContainer"
 
 const WavyProfile: React.FC = () => {
     return <Kasten></Kasten>
