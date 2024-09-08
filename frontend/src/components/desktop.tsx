@@ -20,67 +20,16 @@ const Desktop: React.FC = () => {
     return (
         <div className="App">
             <WavyTaskBar></WavyTaskBar>
-            <Item addWindow={addWindow} icon="foldernormal" text="clickme">
-                <Kasten>
+            <Item addWindow={addWindow} icon="folderrhn" text="clickme">
+                <Kasten title="KAV Rheno-Nicaria e.V.">
                     <WavyDirectory>
                         <Item
                             addWindow={addWindow}
                             icon="console"
                             text="hello.exe"
-                        >
-                            <WavyConsole></WavyConsole>
-                        </Item>
-                        <Item
-                            addWindow={addWindow}
-                            icon="videofile"
-                            text="car.mp4"
-                        >
-                            <Kasten>
-                                <video
-                                    width="320"
-                                    height="480"
-                                    autoPlay
-                                    muted
-                                    loop
-                                >
-                                    <source
-                                        src="/videos/wavy.mp4"
-                                        type="video/mp4"
-                                    />
-                                </video>
-                            </Kasten>
-                        </Item>
-
-                        <Item
-                            addWindow={addWindow}
-                            icon="videofile"
-                            text="frog.mp4"
-                        >
-                            <Kasten>
-                                <img
-                                    style={{ width: "500px", height: "500px" }}
-                                    src="./videos/frog_animation.gif"
-                                    alt=""
-                                />
-                            </Kasten>
-                        </Item>
-
-                        <Item
-                            addWindow={addWindow}
-                            icon="network"
-                            text="skeleton.fbx"
-                        >
-                            <Kasten>
-                                <ModelViewer />
-                            </Kasten>
-                        </Item>
+                        ></Item>
                     </WavyDirectory>
                 </Kasten>
-            </Item>
-            <Item addWindow={addWindow} icon="video" text="powerplant.wavy">
-                <WindowFrame>
-                    <VideoPlayer size={600}></VideoPlayer>
-                </WindowFrame>
             </Item>
 
             <Item addWindow={addWindow} icon="video" text="mixer.wavy">

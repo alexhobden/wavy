@@ -12,7 +12,7 @@ const ExplorEntry: React.FC<WindowProps> = ({ children }) => {
                     height: "16px",
                     marginRight: "4px",
                 }}
-                src={`/images/foldernormal.png`}
+                src={`/images/folderrhn.png`}
                 alt=""
             />
             {children}

@@ -2,10 +2,11 @@ import { useEffect, useState } from "react"
 import WavyButton from "./wavyButton"
 
 interface WindowProps {
+    title: string
     children?: React.ReactNode
 }
 
-const WindowFrame: React.FC<WindowProps> = ({ children }) => {
+const WindowFrame: React.FC<WindowProps> = ({ title, children }) => {
     const [isVisible, setIsVisible] = useState(true)
     const [position, setPosition] = useState<{ top: number; left: number }>({
         top: 0,
@@ -102,7 +103,7 @@ const WindowFrame: React.FC<WindowProps> = ({ children }) => {
                 >
                     <div className="shadow-header px-[8px] pb-[6px] pt-[6px] flex items-center h-[36px] bg-header mb-[2px]">
                         <div
-                            className="flex-grow-4 font-wavy text-white text-stroke"
+                            className=" flex items-center flex-grow-4 font-wavy text-white text-stroke"
                             onMouseDown={handleMouseDown}
                             onMouseMove={handleMouseMove}
                             onMouseUp={handleMouseUp}
@@ -110,7 +111,15 @@ const WindowFrame: React.FC<WindowProps> = ({ children }) => {
                                 cursor: isDragging ? "grabbing" : "grab",
                             }}
                         >
-                            WAVY BOX
+                            <img
+                                style={{
+                                    height: "24px",
+                                    marginRight: "8px",
+                                }}
+                                src={`/images/rhnshield.png`}
+                                alt=""
+                            />
+                            <div>{title}</div>
                         </div>
                         <WavyButton funktion="minimize"></WavyButton>
                         <WavyButton funktion="maximize"></WavyButton>
