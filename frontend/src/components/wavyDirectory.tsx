@@ -8,7 +8,7 @@ interface WavyDirectoryProps {
     children?: React.ReactNode
 }
 
-const WavyDirectory: React.FC<WavyDirectoryProps> = ({children }) => {
+const WavyDirectory: React.FC<WavyDirectoryProps> = ({ children }) => {
     const [explorerTab, setExplorerTab] = useState<React.ReactNode>()
 
     const switchTab = (newTab: React.ReactNode) => {
@@ -28,7 +28,7 @@ const WavyDirectory: React.FC<WavyDirectoryProps> = ({children }) => {
                 W:/Stuttgart/Etzelstraße/KAV Rheno-Nicaria/Home
             </div>
             <div className="flex">
-                <div className="w-[200px] p-[20px] bg-white wavy-hollow">
+                <div className="w-[180px] p-[20px] bg-white wavy-hollow">
                     <ExplorEntry name="Home" switchTab={switchTab}>
                         <Home></Home>
                     </ExplorEntry>
@@ -38,11 +38,17 @@ const WavyDirectory: React.FC<WavyDirectoryProps> = ({children }) => {
                     <ExplorEntry name="Semesterprogramm" switchTab={switchTab}>
                         <Program></Program>
                     </ExplorEntry>
-                    <ExplorEntry name="Chargia" switchTab={switchTab}></ExplorEntry>
-                    <ExplorEntry name="Konten" switchTab={switchTab}></ExplorEntry>
+                    <ExplorEntry
+                        name="Chargia"
+                        switchTab={switchTab}
+                    ></ExplorEntry>
+                    <ExplorEntry
+                        name="Konten"
+                        switchTab={switchTab}
+                    ></ExplorEntry>
                     {/* <VideoPlayer size={228}></VideoPlayer> */}
                 </div>
-                <div className="wavy-hollow flex pl-[8px] pr-[12px] pb-[12px] pt-[16px] bg-white w-[480px] h-96">
+                <div className="wavy-hollow flex pl-[8px] pr-[12px] pb-[12px] pt-[16px] bg-white w-[560px] h-96">
                     {explorerTab}
                 </div>
             </div>
