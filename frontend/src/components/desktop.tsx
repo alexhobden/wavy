@@ -9,6 +9,7 @@ import VideoPlayer from "./videoPlayer"
 import WindowFrame from "./windowFrame"
 import Mixer from "./mixer"
 import ExplorEntry from "../elements/explorEntry"
+import Welcome from "./welcome"
 
 const Desktop: React.FC = () => {
     const [windows, setWindows] = useState<React.ReactNode[]>([])
@@ -87,9 +88,7 @@ const Desktop: React.FC = () => {
                 <Mixer></Mixer>
             </Item>
 
-            <ExplorEntry>Hello</ExplorEntry>
-
-            {windows.length}
+            <Welcome></Welcome>
 
             {windows.map((window, index) => (
                 <div key={index} style={{ position: "absolute" }}>
