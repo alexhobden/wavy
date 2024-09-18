@@ -4,7 +4,7 @@ import { useState } from "react"
 interface ItemProps {
     icon: string
     text: string
-    children?: React.ReactNode // Make the children prop optional
+    children?: React.ReactNode
     addWindow: (child: React.ReactNode) => void
 }
 
