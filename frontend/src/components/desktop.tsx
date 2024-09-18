@@ -60,7 +60,33 @@ const Desktop: React.FC = () => {
                             <Kasten>
                                 <img
                                     style={{ width: "500px", height: "500px" }}
-                                    src="./videos/frog_animation.gif"
+                                    src="./videos/frog_only.gif"
+                                    alt=""
+                                />
+                            </Kasten>
+                        </Item>
+                        <Item
+                            addWindow={addWindow}
+                            icon="videofile"
+                            text="idle.mp4"
+                        >
+                            <Kasten>
+                                <img
+                                    style={{ width: "300px", height: "500px" }}
+                                    src="./videos/skeleton_idle.gif"
+                                    alt=""
+                                />
+                            </Kasten>
+                        </Item>
+                        <Item
+                            addWindow={addWindow}
+                            icon="videofile"
+                            text="walking.mp4"
+                        >
+                            <Kasten>
+                                <img
+                                    style={{ width: "350px", height: "500px" }}
+                                    src="./videos/skeleton_walking.gif"
                                     alt=""
                                 />
                             </Kasten>

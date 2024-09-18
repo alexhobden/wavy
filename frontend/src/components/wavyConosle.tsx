@@ -8,7 +8,7 @@ const WavyConsole: React.FC = () => {
                 <div className="w-[600px] h-[400px] bg-black p-[6px] text-[#04e200] font-console text-[14px]">
                     {/* #TODO: Make Typewriter compatible with paragraphs */}
                     <Typewriter
-                        text="Hello, my name is alex hobden, im a software developer based in stuttgart...I would love to gain a carreer in the Game Design Industry"
+                        text="Hello, my name is alex hobden, im a software developer based in stuttgart...I would love to gain a carreer in coding cool stuff :)"
                         speed={50}
                         linebreak={76}
                         stepsize={1}
